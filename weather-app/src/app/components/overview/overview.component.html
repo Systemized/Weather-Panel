@@ -1,4 +1,4 @@
-<div id="body">
+<!-- <div id="body">
   <div class="city-search">
     <input
       type="text"
@@ -15,6 +15,39 @@
     <app-forecast [forecastData]="forecastData"></app-forecast>
   </div>
 
+  <ng-template #error>
+    <p>{{ errorMessage }}</p>
+  </ng-template>
+</div> -->
+
+
+<div id="body" class="weather-app">
+  <!-- City Search -->
+  <div class="city-search">
+    <input
+      type="text"
+      [(ngModel)]="city"
+      placeholder="Enter a city name"
+      (keydown.enter)="fetchWeather()"
+      aria-label="City name"
+    />
+    <button (click)="fetchWeather()">Search</button>
+  </div>
+
+  <!-- Weather and Forecast -->
+  <div *ngIf="!errorMessage; else error" class="weather-container">
+    <!-- Current Weather -->
+    <div class="current-weather">
+      <app-weather [weatherData]="weatherData"></app-weather>
+    </div>
+
+    <!-- Hourly and Daily Forecast -->
+    <div class="forecast-container">
+      <app-forecast [forecastData]="forecastData"></app-forecast>
+    </div>
+  </div>
+
+  <!-- Error Message -->
   <ng-template #error>
     <p>{{ errorMessage }}</p>
   </ng-template>
