@@ -1,13 +1,14 @@
 export interface ForecastData {
     list: {
-        dt: number; // Timestamp
+        dt: number;
         main: {
-            temp_min: number; // Minimum temperature for the day
-            temp_max: number; // Maximum temperature for the day
+            temp_min: number;
+            temp_max: number;
         };
         weather: {
-            description: string; // Weather description (sky condition)
+            main: string;
+            description: string;
         }[];
-        dt_txt: string; // Date and time of the forecast
+        dt_txt: string;
     }[];
 }

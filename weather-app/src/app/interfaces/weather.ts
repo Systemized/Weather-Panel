@@ -2,8 +2,7 @@ export interface WeatherData {
     weather: {
         main: string;
         description: string;
-        icon: string;
-    }
+    }[];
     main: {
         temp: number;
         temp_min: number;
@@ -13,10 +12,7 @@ export interface WeatherData {
     wind: {
         speed: number;
     };
-    clouds: {
-        all: number;
-    };
-    name: string;
+    name: string; // City
     sys: {
         country: string; // Country code
     };

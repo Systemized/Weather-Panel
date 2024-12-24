@@ -1,0 +1,16 @@
+<div *ngIf="forecastData; else loading">
+    <h2>Forecast for the next 5 days</h2>
+    <div *ngFor="let item of forecastData.list">
+      <div *ngIf="item.dt_txt.endsWith('12:00:00')">
+        <h3>{{ item.dt_txt | date:'short' }}</h3>
+        <p>Temperature Min: {{ item.main.temp_min }}°F</p>
+        <p>Temperature Max: {{ item.main.temp_max }}°F</p>
+        <p>Weather: {{ item.weather[0].description }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #loading>
+    <p>Loading forecast...</p>
+  </ng-template>
+  

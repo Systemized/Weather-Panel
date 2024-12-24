@@ -1,0 +1,14 @@
+<div *ngIf="weatherData; else loadingOrError" class="weather-container">
+  <h2>Current Weather</h2>
+  <div class="weather-info">
+    <p><strong>Temperature:</strong> {{ weatherData.main.temp }}°F</p>
+    <p><strong>Condition:</strong> {{ weatherData.weather[0].main }}</p>
+    <p><strong>Description:</strong> {{ weatherData.weather[0].description }}</p>
+    <p><strong>Humidity:</strong> {{ weatherData.main.humidity }}%</p>
+    <p><strong>Wind Speed:</strong> {{ weatherData.wind.speed }} m/s</p>
+  </div>
+</div>
+
+<ng-template #loadingOrError>
+  <p>Loading weather data...</p>
+</ng-template>
