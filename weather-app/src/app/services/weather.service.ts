@@ -14,12 +14,12 @@ export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-  getCurrentWeather(city: string): Observable<WeatherData> {
-    const url = `${this.apiUrl}/weather?q=${city}&units=imperial&APPID=${this.apiKey}`
+  getCurrentWeather(city: string, unit: string): Observable<WeatherData> {
+    const url = `${this.apiUrl}/weather?q=${city}&units=${unit}&APPID=${this.apiKey}`
     return this.http.get<WeatherData>(url)
   }
-  getForecastWeather(city: string): Observable<ForecastData> {
-    const url = `${this.apiUrl}/forecast?q=${city}&units=metric&APPID=${this.apiKey}`
+  getForecastWeather(city: string, unit: string): Observable<ForecastData> {
+    const url = `${this.apiUrl}/forecast?q=${city}&units=${unit}&APPID=${this.apiKey}`
     return this.http.get<ForecastData>(url)
   }
 }

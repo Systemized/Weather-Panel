@@ -17,6 +17,7 @@ export class OverviewComponent implements OnInit {
   weatherData?: WeatherData;
   forecastData?: ForecastData;
   city: string = 'Atlanta'; // Default City
+  unit: string = 'imperial'; // Default Unit
   errorMessage: string = '';
 
   constructor(private weatherService: WeatherService) {}
@@ -30,11 +31,11 @@ export class OverviewComponent implements OnInit {
       this.errorMessage = 'Failed to load city. Try again.';
     }
 
-    this.weatherService.getCurrentWeather(this.city).subscribe({
+    this.weatherService.getCurrentWeather(this.city, this.unit).subscribe({
       next: (data) => (this.weatherData = data),
       error: () => this.errorMessage = ('Failed to load weather data. Try again.')
     });
-    this.weatherService.getForecastWeather(this.city).subscribe({
+    this.weatherService.getForecastWeather(this.city, this.unit).subscribe({
       next: (data) => (this.forecastData = data),
       error: () => this.errorMessage = ('Failed to load forecast data. Try again.')
     });

@@ -1,12 +1,14 @@
 <div *ngIf="weatherData; else loadingOrError" class="weather-container">
-  <h2>Current Weather</h2>
-  <div class="weather-info">
-    <p><strong>Temperature:</strong> {{ weatherData.main.temp }}°F</p>
-    <p><strong>Condition:</strong> {{ weatherData.weather[0].main }}</p>
-    <p><strong>Description:</strong> {{ weatherData.weather[0].description }}</p>
-    <p><strong>Humidity:</strong> {{ weatherData.main.humidity }}%</p>
-    <p><strong>Wind Speed:</strong> {{ weatherData.wind.speed }} m/s</p>
+  <div class="weather-stats">
+    <h2>{{ weatherData.name }}, {{ weatherData.sys.country }}</h2>
+    <div class="weather-info">
+      <h1>{{ weatherData.main.temp }}° {{ tempUnit }}</h1>
+      <p><strong>Weather:</strong> {{ weatherData.weather[0].description }}</p>
+      <p><strong>Humidity:</strong> {{ weatherData.main.humidity }}%</p>
+      <p><strong>Wind Speed:</strong> {{ weatherData.wind.speed }} {{ windUnit}}</p>
+    </div>
   </div>
+  <img src="https://openweathermap.org/img/wn/{{ weatherData.weather[0].icon }}@4x.png" alt="" class="weather-icon">
 </div>
 
 <ng-template #loadingOrError>

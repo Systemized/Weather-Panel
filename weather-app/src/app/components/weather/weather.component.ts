@@ -10,5 +10,12 @@ import { CommonModule } from '@angular/common';
 })
 export class WeatherComponent {
   @Input() weatherData?: WeatherData;
+  @Input() unit: string = 'imperial';
 
+  get tempUnit(): string {
+    return this.unit === 'imperial' ? 'F' : 'C';
+  }
+  get windUnit(): string {
+    return this.unit === 'imperial' ? 'mph' : 'm/s';
+  }
 }

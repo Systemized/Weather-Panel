@@ -9,18 +9,22 @@
       aria-label="City name"
     />
     <button (click)="fetchWeather()">Search</button>
+    <select [(ngModel)]="unit" (change)="fetchWeather()" class="unit-dropdown">
+      <option value="imperial">Imperial</option>
+      <option value="metric">Metric</option>
+    </select>
   </div>
 
   <!-- Weather and Forecast -->
   <div *ngIf="!errorMessage; else error" class="weather-container">
     <!-- Current Weather -->
     <div class="current-weather">
-      <app-weather [weatherData]="weatherData"></app-weather>
+      <app-weather [weatherData]="weatherData" [unit]="unit"></app-weather>
     </div>
 
     <!-- Hourly and Daily Forecast -->
     <div class="forecast-container">
-      <app-forecast [forecastData]="forecastData"></app-forecast>
+      <app-forecast [forecastData]="forecastData" [forecastUnit]="unit"></app-forecast>
     </div>
   </div>
 

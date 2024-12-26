@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
 })
 export class ForecastComponent implements OnChanges{
   @Input() forecastData?: ForecastData;
+  @Input() forecastUnit: string = 'imperial';
+
   dailyTemps: {date: string; maxTemp: number; minTemp: number}[]  = [];
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -37,5 +39,8 @@ export class ForecastComponent implements OnChanges{
         minTemp: Math.min(...temps),
       };
     });
+  }
+  get tempUnit(): string {
+    return this.forecastUnit === 'imperial' ? 'F' : 'C';
   }
 }
