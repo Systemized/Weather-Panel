@@ -1,26 +1,3 @@
-<!-- <div id="body">
-  <div class="city-search">
-    <input
-      type="text"
-      [(ngModel)]="city"
-      placeholder="Enter a city name"
-      (keydown.enter)="fetchWeather()"
-      aria-label="City name"
-    />
-    <button (click)="fetchWeather()">Search</button>
-  </div>
-
-  <div *ngIf="!errorMessage; else error">
-    <app-weather [weatherData]="weatherData"></app-weather>
-    <app-forecast [forecastData]="forecastData"></app-forecast>
-  </div>
-
-  <ng-template #error>
-    <p>{{ errorMessage }}</p>
-  </ng-template>
-</div> -->
-
-
 <div id="body" class="weather-app">
   <!-- City Search -->
   <div class="city-search">
