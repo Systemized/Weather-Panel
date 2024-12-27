@@ -21,4 +21,4 @@ Notes: To get optimal serach results, be specific with your city and country. Se
     Searching only 'Arlington' would result in Arlington, Texas, rather than Arlington, Virginia
     To search for Arlington, Virginia -- search: 'Arlington, VA, US'
 
-<!-- ![Display Example Image](assets/README_Display.png) -->
+![Display Example Image](assets/README_Display.png)
