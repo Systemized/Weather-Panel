@@ -1,0 +1,35 @@
+<div id="body" class="weather-app">
+  <!-- City Search -->
+  <div class="city-search">
+    <input
+      type="text"
+      [(ngModel)]="city"
+      placeholder="Enter a city name"
+      (keydown.enter)="fetchWeather()"
+      aria-label="City name"
+    />
+    <button (click)="fetchWeather()">Search</button>
+    <select [(ngModel)]="unit" (change)="fetchWeather()" class="unit-dropdown">
+      <option value="imperial">Imperial</option>
+      <option value="metric">Metric</option>
+    </select>
+  </div>
+
+  <!-- Weather and Forecast -->
+  <div *ngIf="!errorMessage; else error" class="weather-container">
+    <!-- Current Weather -->
+    <div class="current-weather">
+      <app-weather [weatherData]="weatherData" [unit]="unit"></app-weather>
+    </div>
+
+    <!-- Hourly and Daily Forecast -->
+    <div class="forecast-container">
+      <app-forecast [forecastData]="forecastData" [forecastUnit]="unit"></app-forecast>
+    </div>
+  </div>
+
+  <!-- Error Message -->
+  <ng-template #error>
+    <p>{{ errorMessage }}</p>
+  </ng-template>
+</div>

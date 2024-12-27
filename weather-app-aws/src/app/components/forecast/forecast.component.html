@@ -1,0 +1,13 @@
+<div *ngIf="forecastData; else loading" class="forecastDays">
+    <div *ngFor="let item of dailyTemps">
+        <div>
+            <h3>{{ item.date | date:'EEE' }}</h3>
+            <p>Low: {{ item.minTemp }}° {{ tempUnit }}</p>
+            <p>High: {{ item.maxTemp }}° {{ tempUnit }}</p>
+        </div>
+    </div>
+</div>
+
+<ng-template #loading>
+    <p>Loading forecast...</p>
+</ng-template>

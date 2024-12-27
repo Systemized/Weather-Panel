@@ -1,0 +1,12 @@
+.weather-container {
+    display: flex;
+
+    .weather-stats {
+        padding: 0 20px;
+    }
+    .weather-icon {
+        padding: 0 20px;
+        width: 200px;
+        height: 200px;
+    }
+}
