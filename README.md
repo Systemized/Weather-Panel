@@ -1,8 +1,8 @@
 # Weather-Panel
-Weather web-app built on Angular/Typescript
+Weather Forecast web-app built on Angular/Typescript
 
 ## Weather App
-This is an Weather webapp build using Angular 19. It displays current weather and a 5-day forecast for any city. The app fetches weather data from the OpenWeatherMap API and supports both metric and imperial units.
+This is an Weather webapp build using Angular v19. It displays current weather and a 5-day forecast for any city. The app fetches weather data from the OpenWeatherMap API and supports both metric and imperial units.
 
 ### Features
 - Current Weather: Displays the current temperature, weather condition, humidity, and wind speed.
@@ -13,14 +13,16 @@ This is an Weather webapp build using Angular 19. It displays current weather an
 
 > [!TIP]
 > To get optimal serach result, be specific with city and country. Search Country using Alpha-2 Codes.
->
->   Searching only 'Rome' would result in Rome, Georgia, US rather than Rome, Italy.
->   To search for Rome, Italy -- search: 'Rome, IT'
->   
->   Searching only 'Arlington' would result in Arlington, Texas, rather than Arlington, Virginia
->   To search for Arlington, Virginia -- search: 'Arlington, VA, US'
+
+    _Searching only 'Rome' would result in Rome, Georgia, US rather than Rome, Italy._
+    _To search for Rome, Italy --- search: 'Rome, IT'._
+
+    _Searching only 'Arlington' would result in Arlington, Texas, rather than Arlington, Virginia._
+    _To search for Arlington, Virginia --- search: 'Arlington, VA, US'._
+
 
 ![Display Example Image](weather-app/src/assets/README_Display.png)
+
 
 ### Current 2 Versions:
 (Mobile UI not yet implemented)
