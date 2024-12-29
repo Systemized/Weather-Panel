@@ -2,7 +2,7 @@
 Weather Forecast web-app built on Angular/Typescript
 
 ## Weather App
-This is an Weather webapp build using Angular v19. It displays current weather and a 5-day forecast for any city. The app fetches weather data from the OpenWeatherMap API and supports both metric and imperial units.
+This is an Weather webapp build using Angular v19. It displays current weather and a 5-day high/low forecast for any city. The app fetches weather data from the OpenWeatherMap API and supports both metric and imperial units.
 
 ### Features
 - Current Weather: Displays the current temperature, weather condition, humidity, and wind speed.
@@ -14,11 +14,11 @@ This is an Weather webapp build using Angular v19. It displays current weather a
 > [!TIP]
 > To get optimal serach result, be specific with city and country. Search Country using Alpha-2 Codes.
 
-    _Searching only 'Rome' would result in Rome, Georgia, US rather than Rome, Italy._
-    _To search for Rome, Italy --- search: 'Rome, IT'._
-
-    _Searching only 'Arlington' would result in Arlington, Texas, rather than Arlington, Virginia._
-    _To search for Arlington, Virginia --- search: 'Arlington, VA, US'._
+    Searching only 'Rome' would result in Rome, Georgia, US rather than Rome, Italy.
+    To search for Rome, Italy --- search: 'Rome, IT'.
+    
+    Searching only 'Arlington' would result in Arlington, Texas, rather than Arlington, Virginia.
+    To search for Arlington, Virginia --- search: 'Arlington, VA, US'.
 
 
 ![Display Example Image](weather-app/src/assets/README_Display.png)
@@ -36,7 +36,7 @@ This is an Weather webapp build using Angular v19. It displays current weather a
 
 1. Clone repository:
 
-    terminal
+    `terminal`
     ```bash
     git clone https://github.com/Systemized/Weather-Panel.git
     cd weather-panel/weather-app
@@ -44,7 +44,7 @@ This is an Weather webapp build using Angular v19. It displays current weather a
     
 2. Register at [OpenWeatherMap](https://openweathermap.org/) for API key, then
     
-    terminal
+    `terminal`
     ```bash
     ng generate environemnt environemnts/environment
     ```
@@ -59,7 +59,7 @@ This is an Weather webapp build using Angular v19. It displays current weather a
     };
     ```
     
-    terminal
+    `terminal`
     ```bash
     ng serve
     ```
