@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
 export class OverviewComponent implements OnInit {
   weatherData?: WeatherData;
   forecastData?: ForecastData;
-  city: string = 'Atlanta'; // Default City
+  city: string = '';
   unit: string = 'imperial'; // Default Unit
   errorMessage: string = '';
 
@@ -28,7 +28,8 @@ export class OverviewComponent implements OnInit {
 
   fetchWeather(): void {
     if (!this.city.trim()) {
-      this.errorMessage = 'Failed to load city. Try again.';
+      this.errorMessage = 'Enter a City Name.';
+      return;
     }
 
     this.weatherService.getCurrentWeather(this.city, this.unit).subscribe({
