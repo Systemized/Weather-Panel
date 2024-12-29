@@ -1,11 +1,11 @@
 # Weather-Panel
 Weather web-app built on Angular/Typescript
 
-Weather App
+##Weather App
 
 This is an Weather webapp build using Angular 19. It displays current weather and a 5-day forecast for any city. The app fetches weather data from the OpenWeatherMap API and supports both metric and imperial units.
 
-Features
+###Features
 
 - Current Weather: Displays the current temperature, weather condition, humidity, and wind speed.
 - 5-Day Forecast: Shows the daily minimum and maximum temperatures for the next five days.
@@ -23,7 +23,10 @@ Notes: To get optimal serach results, be specific with your city and country. Se
 
 ![Display Example Image](weather-app/src/assets/README_Display.png)
 
-Currently 2 Versions:
-    Serverless Weather Webapp with API hidden and fetched though AWS Lambda.
-        [Weather Panel](http://weather-panel.s3-website-us-east-1.amazonaws.com/) (No personal domain yet, so connection not secure)
-    Weather Webapp with apikey hidden in angular environment.
+###Currently 2 Versions:
+(Mobile UI not yet implemented)
+
+1.  Weather Webapp with apikey hidden in angular environment.
+
+2.  Serverless Weather Webapp with API hidden and fetched though AWS Lambda.
+    - [Weather Panel](http://weather-panel.s3-website-us-east-1.amazonaws.com/) (No personal domain yet, so connection not secure)
