@@ -22,3 +22,8 @@ Notes: To get optimal serach results, be specific with your city and country. Se
     To search for Arlington, Virginia -- search: 'Arlington, VA, US'
 
 ![Display Example Image](weather-app/src/assets/README_Display.png)
+
+Currently 2 Versions:
+    Serverless Weather Webapp with API hidden and fetched though AWS Lambda.
+        [Weather Panel](http://weather-panel.s3-website-us-east-1.amazonaws.com/) (No personal domain yet, so connection not secure)
+    Weather Webapp with apikey hidden in angular environment.
